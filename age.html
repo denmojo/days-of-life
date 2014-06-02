@@ -1,121 +1,162 @@
-<html> 
-<HEAD>
-<title>Days of Life</title>
-<!-- Written by Dennis Mojado https://github.com/denmojo &copy; MIT License -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<style>
-	body {
-		margin: 0;
-		font: 14px "Lucida Grande";
-		position: absolute;
-		top: 24px;
-		left: 30px;
-	}
-	div#age {
-		font-weight:bold;
-	}
-	div#bday {
-		font-weight:bold;
-	}
-	td#clock {
-		vertical-align:top;
-	}
-	th#mytitle {
-		text-align:left;
-	}
-	p#ftnote {
-		font-size:x-small;
-	}
-</style>
-<script type="text/javascript" src="age2.js"></script>  
-</HEAD>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+
+  <title>Days of Life</title>
+  <!-- Written by Dennis Mojado https://github.com/denmojo &copy; MIT License -->
+
+  <style type="text/css">
+/*<![CDATA[*/
+        body {
+                margin: 0;
+                font: 14px "Lucida Grande";
+                position: absolute;
+                top: 24px;
+                left: 30px;
+        }
+        div#age {
+                font-weight:bold;
+        }
+        div#bday {
+                font-weight:bold;
+        }
+        td#clock {
+                vertical-align:top;
+        }
+        th#mytitle {
+                text-align:left;
+        }
+        p#ftnote {
+                font-size:x-small;
+        }
+  /*]]>*/
+  </style>
+  <script type="text/javascript" src="age2.js">
+</script>
+</head>
+
 <body>
-    <table width="960" border="0" cellspacing="2">
-    	<tr>
-       	  <th id="mytitle" scope="row"><h1>Days of Life</h1></th>
-			<td id="clock" rowspan="2"><img src="300px-Wall_clock.jpg" border="0"></td>
-      </tr>
-      <tr>
-        <td><p><strong>Enter your date of birth:</strong></p>
-	<form name="inputform" id="inputform">
-		Month <select size="1" name="month"> 
-			<option value="1">January</option>
-			<option value="2">February</option>
-			<option value="3">March</option>
-			<option value="4">April</option>
-			<option value="5">May</option>
-			<option value="6">June</option>
-			<option value="7">July</option>
-			<option value="8">August</option>
-			<option value="9">September</option>
-			<option value="10">October</option>
-			<option value="11">November</option>
-			<option value="12">December</option>
-		</select>
-		Date <input name="day" size="3"> Year <input name="year" size="6"> Hour <input name="hrs" value="00" size="6"> <select size="1" name="ampm">
-			<option selected>
-				AM			</option>
-			<option>
-				PM			</option>
-		</select> <!-- <input name="settoday" onClick="setToday()" type="button" value="Yesterday"> -->&nbsp;<input name="start" onClick="run()" type="button" value="Calculate"><br>
-		<strong><br>
-       	</strong>
-		<div id="age"><strong>Your age will be displayed here.</strong></div>		
-        <br>
-		You have been living for:<br>
-		<br>
-		<!-- LOL you can tell how many years ago I wrote this because of the use of horrendous table elements -->
-		<!-- someone please rewrite!! -dm -->
-		<table border="0">
-			<tbody>
-				<tr>
-					<td>
-						<strong>Months</strong>:				  </td>
-					<td>
-						<div id="months"></div>					</td>
-				</tr>
-				<tr>
-					<td>
-						<strong>Weeks</strong>:				  </td>
-					<td>
-						<div id="weeks"></div>					</td>
-				</tr>
-				<tr>
-					<td>
-						<strong>Days</strong>:				  </td>
-					<td>
-						<div id="answer"></div>					</td>
-				</tr>
-				<tr>
-					<td>
-						<strong>Hours</strong>:				  </td>
-					<td>
-						<div id="hours"></div>					</td>
-				</tr>
-<!--				<tr>
-					<td>
-						Minutes:
-					</td>
-					<td>
-						<div id="min"></div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Seconds:
-					</td>
-					<td>
-						<div id="sec"></div>
-					</td>
-				</tr> -->
-			</tbody>
-		</table>
-	  <p>Your next birthday will be in:<br>
-	    <div id="bday"></div>
-      </p>
-</form></td>
-      </tr>
-    </table>
-<p id="ftnote"><sup>*</sup>btw, this is all in JavaScript client-side, so don't worry about this site harvesting birthday information.</p>
+  <table width="960" border="0" cellspacing="2">
+    <tr>
+      <th id="mytitle" scope="row">
+        <h1>Days of Life</h1>
+      </th>
+      <td id="clock" rowspan="2"><img src="300px-Wall_clock.jpg" border="0" /></td>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Enter your date of birth:</strong></p>
+        <form name="inputform" id="inputform">
+          Month <select size="1" name="month">
+            <option value="1">
+              January
+            </option>
+            <option value="2">
+              February
+            </option>
+            <option value="3">
+              March
+            </option>
+            <option value="4">
+              April
+            </option>
+            <option value="5">
+              May
+            </option>
+            <option value="6">
+              June
+            </option>
+            <option value="7">
+              July
+            </option>
+            <option value="8">
+              August
+            </option>
+            <option value="9">
+              September
+            </option>
+            <option value="10">
+              October
+            </option>
+            <option value="11">
+              November
+            </option>
+            <option value="12">
+              December
+            </option>
+          </select> Date <input name="day" size="3" /> Year <input name="year" size=
+          "6" /> Hour <input name="hrs" value="00" size="6" /> <select size="1" name=
+          "ampm">
+            <option selected="selected">
+              AM
+            </option>
+            <option>
+              PM
+            </option>
+          </select> 
+          <!-- <input name="settoday" onClick="setToday()" type="button" value="Yesterday"> -->&nbsp;<input name="start"
+          onclick="run()" type="button" value="Calculate" /><br />
+          <strong><br /></strong>
+          <div id="age">
+            <strong>Your age will be displayed here.</strong>
+          </div><br />
+          You have been living for:<br />
+          <br />
+          <table border="0">
+            <tbody>
+              <tr>
+                <td><strong>Months</strong>:</td>
+                <td>
+                  <div id="months"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Weeks</strong>:</td>
+                <td>
+                  <div id="weeks"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Days</strong>:</td>
+                <td>
+                  <div id="answer"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Hours</strong>:</td>
+                <td>
+                  <div id="hours"></div>
+                </td>
+              </tr><!--
+			  <tr>
+                <td>
+                  <strong>Minutes</strong>:
+                </td>
+                <td>
+                  <div id="min"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Seconds</strong>:
+                </td>
+                <td>
+                  <div id="sec"></div>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+          <p>Your next birthday will be in:<br /></p>
+          <div id="bday"></div>
+        </form>
+      </td>
+    </tr>
+  </table>
+  <p id="ftnote"><sup>*</sup>btw, this is all in JavaScript client-side, so don't worry
+  about this site harvesting birthday information.</p>
 </body>
 </html>
