@@ -180,6 +180,8 @@ function run() {
         totdays += age / 4;
         totdays = parseInt(totdays) + gdate + m + n;
         document.getElementById('answer').innerHTML = "" + totdays + " days ";
+	moons = parseInt(totdays / 29.53);
+	document.getElementById('moons').innerHTML = "" + moons + " moons";
         months = age * 12;
         months += 12 - parseInt(mm);
         months += gmonth;
